@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind Form - Francois</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        jolijaune: '#F5F293',
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        
+        @layer components {
+        .my-fieldset {
+            @apply border-2 border-gray-400 p-8 rounded-3xl;
+        }
+
+        .my-lightframe {
+            @apply border-2 rounded-2xl;
+        }
+
+        .my-label {
+            @apply w-1/4;
+        }
+        .my-radio {
+            @apply m-2 ;
+        }
+        .my-button {
+            @apply p-2 bg-gray-400 text-white m-4 w-40 rounded-3xl;
+        }
+        }
+
+
+/* si on veut créer une classe à nous from scratch */
+/* @layer utilitie */
+@layer utilities {
+        .ma-classe-custom {
+            background-color: #fffef0;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .mon-h2 {
+            position: relative;
+            top: 1.5rem;
+            left: 4rem;
+            background-color: #fffef0;
+            display: inline;
+            font-size: 1.8rem;
+            padding: 0 1rem;
+            color: grey;
+        }
+    }
+    
+    </style>
+
+    
+</head>
+<body class="ma-classe-custom">
+    <main class="my-fieldset">
+        <form action="">
+            <section>
+                <h2 class="mon-h2">Contexte</h2>
+                <fieldset name="Contexte" class="my-fieldset flex flex-wrap ">
+                    <span class="m-4"><label for="entree">Date d'entrée</label>
+                    <input type="date" id="entree" class="my-lightframe"></span>
+                    <span class="m-4 ml-12"><label for="sortie">Date de sortie</label>
+                    <input type="date" id="sortie" class="my-lightframe"></span>
+                    <span class="m-4"><label for="date">Date du formulaire</label>
+                    <input type="date" id="date" class="my-lightframe"></span>
+                </fieldset>
+            </section>
+            <section>
+                <h2 class="mon-h2">Coordonnées</h2>
+                <fieldset name="coordonnees" class="my-fieldset">
+                    <label for="centre">Centre</label>
+                    <input type="text"id="centre" class="my-lightframe">
+                    <label for="formateur--nom">Nom du formateur</label>
+                    <input type="text"id="formateur--nom" class="my-lightframe">
+                    <label for="formateur--prenom">Prénom du formateur</label>
+                    <input type="text"id="formateur--prenom" class="my-lightframe">
+                    <label for="stagiaire--nom">Nom du stagiaire</label>
+                    <input type="text"id="stagiaire--nom" class="my-lightframe">
+                    <label for="stagiaire--prenom">Prénom du stagiaire</label>
+                    <input type="text" id="stagiaire--prenom" class="my-lightframe">
+                </fieldset>
+            </section>
+            <section>
+                <h2 class="mon-h2">Evaluation</h2>
+                <fieldset name="evaluation" class="my-fieldset">
+                    <div class="mb-6">
+                        <p>Question numéro 1</p>
+                        <label class="p-2">réponse1<input type="radio" name="question1" id="réponse1-1" class="my-radio"></label>
+                        <label class="p-2">réponse 2<input type="radio" name="question1" id="réponse1-2" class="my-radio"></label>
+                        <label class="p-2 font-bold">réponse 3<input type="radio" name="question1" id="réponse1-3" class="my-radio"></label>
+                        <label class="p-2">réponse 4<input type="radio" name="question1" id="réponse1-4" class="my-radio"></label>
+                    
+                    </div>
+                    <div class="mb-6">
+                        <p>Question numéro 2</p>
+                        <label class="p-2">réponse1<input type="radio" name="question2" class="my-radio"></label>
+                        <label class="p-2">réponse 2<input type="radio" name="question2" class="my-radio"></label>
+                        <label class="p-2 font-bold">réponse 3<input type="radio" name="question2" class="my-radio"></label>
+                        <label class="p-2">réponse 4<input type="radio" name="question2" class="my-radio"></label>
+                    
+                    </div>
+                    <div class="mb-6">
+                        <p>Question numéro 3</p>
+                        <label class="p-2">réponse1<input type="radio" name="question3" class="my-radio"></label>
+                        <label class="p-2">réponse 2<input type="radio" name="question3" class="my-radio"></label>
+                        <label class="p-2 font-bold">réponse 3<input type="radio" name="question3" class="my-radio"></label>
+                        <label class="p-2">réponse 4<input type="radio" name="question3" class="my-radio"></label>
+                    
+                    </div>
+                    <div class="mb-6">
+                        <p>Question numéro 4</p>
+                        <label class="p-2">réponse1<input type="radio" name="question4" class="my-radio"></label>
+                        <label class="p-2">réponse 2<input type="radio" name="question4" class="my-radio"></label>
+                        <label class="p-2 font-bold">réponse 3<input type="radio" name="question4"  class="my-radio"></label>
+                        <label class="p-2">réponse 4<input type="radio" name="question4" class="my-radio"></label>
+                    
+                    </div>
+                    <div class="mb-6">
+                        <p>Question numéro 5</p>
+                        <label class="p-2">réponse1<input type="radio" name="question5" class="my-radio"></label>
+                        <label class="p-2">réponse 2<input type="radio" name="question5" class="my-radio"></label>
+                        <label class="p-2 font-bold">réponse 3<input type="radio" name="question5" class="my-radio"></label>
+                        <label class="p-2">réponse 4<input type="radio" name="question5" class="my-radio"></label>
+                    
+                    </div>
+                    <div class="">
+                        <p>Question numéro 6</p>
+                        <label class="p-2">réponse1<input type="radio" name="question6" class="my-radio"></label>
+                        <label class="p-2">réponse 2<input type="radio" name="question6" class="my-radio"></label>
+                        <label class="p-2 font-bold">réponse 3<input type="radio" name="question6" class="my-radio"></label>
+                        <label class="p-2">réponse 4<input type="radio" name="question6" class="my-radio"></label>
+                    </div>
+                </fieldset>
+            </section>
+            <section class="flex justify-center">
+                <input type="reset" class="my-button">
+                <input type="submit" class="my-button">
+            </section>
+        </form>
+    </main>
+</body>
+</html>
