@@ -38,6 +38,10 @@
         .my-button {
             @apply p-2 bg-gray-400 text-white m-4 w-40 rounded-3xl;
         }
+
+        .my-textinput-wrapper {
+            @apply m-4 flex .space-between w-48;
+        }
         }
 
 
@@ -60,6 +64,10 @@
             padding: 0 1rem;
             color: grey;
         }
+
+        .space-between {
+            justify-content: space-between;
+        }
     }
     
     </style>
@@ -71,7 +79,7 @@
         <form action="">
             <section>
                 <h2 class="mon-h2">Contexte</h2>
-                <fieldset name="Contexte" class="my-fieldset flex flex-wrap ">
+                <fieldset name="Contexte" class="my-fieldset flex flex-wrap space-between">
                     <span class="m-4"><label for="entree">Date d'entrée</label>
                     <input type="date" id="entree" class="my-lightframe"></span>
                     <span class="m-4 ml-12"><label for="sortie">Date de sortie</label>
@@ -82,7 +90,7 @@
             </section>
             <section>
                 <h2 class="mon-h2">Coordonnées</h2>
-                <fieldset name="coordonnees" class="my-fieldset">
+                <fieldset name="coordonnees" class="my-fieldset flex flex-col">
                     <label for="centre">Centre</label>
                     <input type="text"id="centre" class="my-lightframe">
                     <label for="formateur--nom">Nom du formateur</label>
